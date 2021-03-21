@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "a4c203a2-d5e5-4daf-968b-e88013d04c0e",
+		"name": "rest.shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Les catégories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rest_shop_war_exploded/rest/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest_shop_war_exploded",
+						"rest",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Une catégorie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rest_shop_war_exploded/rest/categories/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest_shop_war_exploded",
+						"rest",
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Les items d'une catégorie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rest_shop_war_exploded/rest/categories/1/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest_shop_war_exploded",
+						"rest",
+						"categories",
+						"1",
+						"items"
+					]
+				},
+				"description": "a"
+			},
+			"response": []
+		},
+		{
+			"name": "Les items",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categorieId\":\"1\",\r\n    \"item\": {\r\n        \"marque\" : \"Une marque\",\r\n        \"prix\": \"11\",\r\n        \"libelle\": \"Le libelle\",\r\n        \"photo\": \"https://img-19.ccm2.net/8vUCl8TXZfwTt7zAOkBkuDRHiT8=/1240x/smart/b829396acc244fd484c5ddcdcb2b08f3/ccmcms-commentcamarche/20494859.jpg\",\r\n        \"description\": \"Ceci est une description\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest_shop_war_exploded/rest/items/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest_shop_war_exploded",
+						"rest",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Un item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rest_shop_war_exploded/rest/items/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest_shop_war_exploded",
+						"rest",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer un item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categorieId\": 1,\r\n    \"item\":{\r\n        \"libelle\": \"Asus Zenbook\",\r\n        \"marque\": \"Asus\",\r\n        \"description\": \"Ceci est un pc portable avec un touchpad\",\r\n        \"photo\": \"https://www.leparisien.fr/resizer/XncL3rTzo_JE8WJvoiym6gE8NVo=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/232PSKEQSOGMNOV4SEFNUNLZFE.jpg\",\r\n        \"prix\" : \"1200\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest_shop_war_exploded/rest/items/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest_shop_war_exploded",
+						"rest",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update un item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"1\",\r\n    \"libelle\": \"Asus Zenbook\",\r\n    \"marque\": \"Asus\",\r\n    \"description\": \"Ceci est un pc portable avec un touchpad\",\r\n    \"photo\": \"https://www.leparisien.fr/resizer/XncL3rTzo_JE8WJvoiym6gE8NVo=/932x582/cloudfront-eu-central-1.images.arcpublishing.com/leparisien/232PSKEQSOGMNOV4SEFNUNLZFE.jpg\",\r\n    \"prix\" : \"1200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest_shop_war_exploded/rest/items/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest_shop_war_exploded",
+						"rest",
+						"items",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete un item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rest_shop_war_exploded/rest/items/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest_shop_war_exploded",
+						"rest",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
